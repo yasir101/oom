@@ -1,0 +1,2 @@
+class CompanyAsset < ApplicationRecord
+end
