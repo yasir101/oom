@@ -1,0 +1,2 @@
+module SpendingLogsHelper
+end

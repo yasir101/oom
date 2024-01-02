@@ -1,4 +1,17 @@
 %ul.nav.flex-column
   %li.nav-item
-    = link_to "Assets", company_assets_path, class: "nav-link"
-  
+    
+
+
+%nav.navbar.navbar-expand-lg.bg-body-tertiary
+  .container-fluid
+    %button.navbar-toggler{"aria-controls" => "navbarTogglerDemo03", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarTogglerDemo03", "data-bs-toggle" => "collapse", type: "button"}
+      %span.navbar-toggler-icon
+    %a.navbar-brand{href: "#"} Orbiqon Office
+    #navbarTogglerDemo03.collapse.navbar-collapse
+      %ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        %li.nav-item
+          = link_to "Assets", company_assets_path, class: "nav-link"
+        %li.nav-item
+          = link_to "Spending Log", spending_logs_path, class: "nav-link"  
+      

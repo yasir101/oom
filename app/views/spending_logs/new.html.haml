@@ -1,0 +1,21 @@
+.container.mt-3
+  .row.justify-content-center
+    .col-sm-12.col-md-6.col-lg-6
+      = form_with model: @spending_log do |form|
+        .mb-3
+          = form.label :spending_type
+          = form.text_field :spending_type, class: "form-control"
+        .mb-3
+          = form.label :action
+          = form.select :action, [['Select Action', ''],['Buy', 'buy'], ['Sell', 'sell'], ['Return', 'return'], ['Withdraw', 'Withdraw']], {}, {class: "form-control"}
+          
+        .mb-3
+          = form.label :amount
+          = form.number_field :amount, class: "form-control"
+        .mb-3
+          = form.label :quantity
+          = form.number_field :quantity, class: "form-control"
+        .mb-3
+          = form.label :description
+          = form.text_area :description, class: "form-control"
+        = form.submit class: "btn btn-primary"
