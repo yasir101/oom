@@ -1,10 +1,10 @@
 .container.text-center.mt-3
   .row.justify-content-center
-    .col-10  
+    .col-sm-12.col-md-12  
       .d-flex.flex-row-reverse
         = link_to "New Spending Log", new_spending_log_path, class: "btn btn-primary mb-4"
 
-      %table.table.table-light.table-hover
+      %table.table.table-sm.table-md.table-light.table-hover
         %thead
           %tr
             %th{scope: "col"} #
@@ -19,7 +19,7 @@
           - @spending_logs.each.with_index(1) do |log, index|
             %tr
               %th= index
-              %th= log.created_at.strftime("%B %d, %Y")
+              %th= log&.spending_date&.strftime("%B %d, %Y")
               %td= log.spending_type
               %td= log.action
               %td= log.amount
